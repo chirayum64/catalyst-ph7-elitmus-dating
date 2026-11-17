@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pH7 by eLitmus — Where Minds Click Before Faces Do</title>
+  <meta name="description"
+    content="pH7 by eLitmus: The Cognitive & Values-First Dating Protocol for 1,000,000+ Verified Young Professionals (2020–2023 Batch Cohort)." />
+  <title>Catalyst (pH7) by eLitmus — The App That Wants You To Leave</title>
+  <meta name="description"
+    content="Catalyst (pH7) by eLitmus: Verified Small-Group Tables, Asymmetric Duet Puzzles, Mutual Spark Reveal & 5-Axis Equilibrium for 1,000,000+ Relocated Alumni (2020–2023 Cohort)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Top Evaluator & Founder Command Bar -->
+  <!-- Top Evaluator & Judge Mode Time-Machine Bar -->
+  <div class="evaluator-bar">
+    <div class="evaluator-bar-left">
+      <span class="evaluator-badge">⚡ EVALUATOR & DEMO SWITCHER</span>
+      <span style="color: var(--text-muted);">1-Click Persona Switch (or Login / Signup):</span>
+      <span class="evaluator-badge">⚡ JUDGE MODE & PERSONA SWITCHER</span>
+      <div id="personaPillsContainer" class="persona-pills"></div>
+    </div>
+    <div class="evaluator-bar-right">
+      <button class="btn btn-secondary btn-sm" onclick="window.ph7App.openAuthModal('login')">🔑 Login /
+        Credentials</button>
+      <button class="btn btn-emerald btn-sm" onclick="window.ph7App.openAuthModal('register')">✨ + Import eLitmus pH
+        ID</button>
+      <button class="btn btn-rose btn-sm" onclick="window.ph7App.resetDemoData()">↺ Reset Demo State</button>
+      <button class="btn btn-secondary btn-sm" onclick="window.ph7App.openTimeMachineTour()">⏱️ Judge Time-Machine
+        (5-Min Tour)</button>
+      <button class="btn btn-secondary btn-sm" onclick="window.ph7App.openAuthModal('login')">🔑 Login</button>
+      <button class="btn btn-emerald btn-sm" onclick="window.ph7App.openAuthModal('register')">✨ + Verify eLitmus
+        ID</button>
+      <button class="btn btn-rose btn-sm" onclick="window.ph7App.resetDemoData()">↺ Reset Demo</button>
+    </div>
+  </div>
+
+  <!-- App Header & Live User Telemetry -->
+  <header class="app-header">
+    <div class="brand-cluster">
+      <div class="brand-logo">pH7</div>
+      <div>
+        <div class="brand-title">
+          pH7 <span class="elitmus-tag">VERIFIED BY eLitmus</span>
+          Catalyst <span style="font-weight:400; color:#a5b4fc;">(pH7)</span>
+          <span class="elitmus-tag">VERIFIED BY eLitmus</span>
+          <span class="trust-chip amber" style="font-size:0.68rem;">"The App That Wants You To Leave"</span>
+        </div>
+        <div class="brand-sub">Where Minds Click Before Faces Do • 2020–2023 Alumni Equilibrium Network</div>
+        <div class="brand-sub">Verify → Curated Sunday Table (₹0–₹300 Cap) → Asymmetric Duet Puzzle → Meet IRL → Mutual
+          Spark Reveal</div>
+      </div>
+    </div>
+    <div id="userTelemetryStrip" class="telemetry-strip"></div>
+  </header>
+
+  <!-- Primary Navigation Tabs -->
+  <!-- Primary Navigation Tabs (Mapped to the Core Loop + Judge Time Machine) -->
+  <div class="nav-tabs-container">
+    <nav class="nav-tabs" id="mainNavTabs">
+      <button class="nav-tab active" data-tab="discover" onclick="window.ph7App.switchTab('discover')">
+        ⚡ Wavelength Feed <span class="tab-badge" id="badgeDiscover">Anti-Swipe</span>
+        <button class="nav-tab active" data-tab="tables" onclick="window.ph7App.switchTab('tables')">
+          ☕ 1. Sunday Table Drop & Duet <span class="tab-badge" id="badgeTables">₹49–₹99 UPI</span>
+        </button>
+        <button class="nav-tab" data-tab="dilemmas" onclick="window.ph7App.switchTab('dilemmas')">
+          🧩 Life-Architecture Lab <span class="tab-badge">5 Micro-Cases</span>
+          <button class="nav-tab" data-tab="discover" onclick="window.ph7App.switchTab('discover')">
+            ✨ 2. Morning Spark & 5-Axis Feed <span class="tab-badge" id="badgeDiscover">Mutual Pick</span>
+          </button>
+          <button class="nav-tab" data-tab="chemistry" onclick="window.ph7App.switchTab('chemistry')">
+            💬 Focused Chemistry Lab <span class="tab-badge" id="badgeSlots">2/3 Slots</span>
+            💬 3. Spark Chat & Scam Shield <span class="tab-badge" id="badgeSlots">2/3 Slots</span>
+          </button>
+          <button class="nav-tab" data-tab="dilemmas" onclick="window.ph7App.switchTab('dilemmas')">
+            🧩 4. Life-Architecture Lab <span class="tab-badge">5 Dilemmas</span>
+          </button>
+          <button class="nav-tab" data-tab="passport" onclick="window.ph7App.switchTab('passport')">
+            🛡️ Trust Passport & Firewall <span class="tab-badge" id="badgeCloaked">1 Cloaked</span>
+            🛡️ 5. Trust Ladder, DPDP & Firewall <span class="tab-badge" id="badgeCloaked">Rung 4/4</span>
+          </button>
+          <button class="nav-tab" data-tab="founder" onclick="window.ph7App.switchTab('founder')">
+            🚀 Founder's Playbook <span class="tab-badge">GTM • Revenue • Legal</span>
+            🚀 6. Founder Playbook & Metrics <span class="tab-badge">North Star</span>
+          </button>
+    </nav>
+  </div>
+
+  <!-- Main Dynamic Workspace -->
+  <main id="appMainWorkspace" class="main-container"></main>
+
+  <!-- Dynamic Modal Container -->
+  <div id="modalContainer" style="display: none;"></div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="./localApiFallback.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>

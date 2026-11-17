@@ -160,18 +160,30 @@
   }
 
   async function apiFetch(path, options = {}) {
-    const res = await fetch(path, {
-      headers: { "Content-Type": "application/json" },
-      ...options
-    });
-    const data = await res.json();
-    if (!res.ok) {
-      const err = new Error(data.error || "API Error");
-      err.code = data.code;
-      err.payload = data;
+    try {
+      const res = await fetch(path, {
+        headers: { "Content-Type": "application/json" },
+        ...options
+      });
+      const contentType = res.headers.get("content-type") || "";
+      if (res.status === 404 && !contentType.includes("application/json") && window.ph7LocalApi) {
+        return await window.ph7LocalApi.handle(path, options);
+      }
+      const data = await res.json();
+      if (!res.ok) {
+        const err = new Error(data.error || "API Error");
+        err.code = data.code;
+        err.payload = data;
+        throw err;
+      }
+      return data;
+    } catch (err) {
+      if (err.code) throw err;
+      if (window.ph7LocalApi) {
+        return await window.ph7LocalApi.handle(path, options);
+      }
       throw err;
     }
-    return data;
   }
 
   async function loadAllState() {
