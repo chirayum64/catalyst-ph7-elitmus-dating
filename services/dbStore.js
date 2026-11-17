@@ -1,11 +1,13 @@
 /**
- * Persistent JSON + In-Memory Database Store for pH7 by eLitmus
+ * Persistent JSON + In-Memory Database Store for Catalyst (pH7) by eLitmus
  * Automatically seeds on first boot and persists all user actions across restarts.
  */
 
 const fs = require("fs");
 const path = require("path");
 const {
+  WEEKLY_DROP_TABLES,
+  DUET_PUZZLES,
   DILEMMA_BANK,
   SAFE_DATE_VENUES,
   COOP_ICEBREAKERS,
@@ -19,12 +21,22 @@ const DB_FILE = path.join(__dirname, "..", "data", "runtime-db.json");
 function createFreshState() {
   return {
     users: JSON.parse(JSON.stringify(USERS)),
+    tables: JSON.parse(JSON.stringify(WEEKLY_DROP_TABLES)),
+    duetPuzzles: JSON.parse(JSON.stringify(DUET_PUZZLES)),
     conversations: JSON.parse(JSON.stringify(INITIAL_CONVERSATIONS)),
     dilemmas: JSON.parse(JSON.stringify(DILEMMA_BANK)),
     venues: JSON.parse(JSON.stringify(SAFE_DATE_VENUES)),
     icebreakers: JSON.parse(JSON.stringify(COOP_ICEBREAKERS)),
     alumniRegistry: JSON.parse(JSON.stringify(ELITMUS_ALUMNI_REGISTRY)),
     safetyReports: [],
+    scamShieldLogs: [
+      {
+        id: "scam_seed_1",
+        blockedPattern: "UPI ID / QR Request (user@okaxis)",
+        timestamp: "2026-11-14T19:15:00Z",
+        action: "Auto-Blocked in Early Chat (McAfee 2026 Protection)"
+      }
+    ],
     closureLogs: [
       {
         id: "cls_seed_1",
@@ -39,10 +51,12 @@ function createFreshState() {
       totalVerifiedAlumniPool: 1042800,
       activatedWaitlistUsers: 68400,
       monthlyActiveUsers: 24500,
-      payingSubscribers: 3180,
-      partnerVenueBookingsMonthly: 1420,
-      avgResponseRatePct: 89.4,
-      ghostingReductionPct: 78.2,
+      meetupsAttendedPer100Users: 64.8,
+      avgTimeInAppMinutesWeekly: 14.2, // Anti-metric: lower is better!
+      payingTableSeatsMonthly: 8420,
+      corporateWelcomeSocialsBooked: 42,
+      avgShowUpRatePct: 96.4,
+      ghostingReductionPct: 84.5,
       coworkerCloaksActive: 19400
     }
   };
@@ -58,13 +72,15 @@ class DBStore {
     try {
       if (fs.existsSync(DB_FILE)) {
         const raw = fs.readFileSync(DB_FILE, "utf8");
-        this.state = JSON.parse(raw);
-      } else {
-        this.state = createFreshState();
-        this.save();
+        const parsed = JSON.parse(raw);
+        if (parsed && parsed.tables && parsed.duetPuzzles) {
+          this.state = parsed;
+          return;
+        }
       }
+      this.state = createFreshState();
+      this.save();
     } catch (err) {
-      console.warn("Initializing fresh in-memory state:", err.message);
       this.state = createFreshState();
     }
   }

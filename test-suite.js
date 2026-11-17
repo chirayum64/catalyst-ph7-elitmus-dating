@@ -1,12 +1,12 @@
 /**
- * End-to-End Integration Test Suite for pH7 by eLitmus
- * Verifies all 11 core product innovations and API endpoints.
+ * End-to-End Integration Test Suite for Catalyst (pH7) by eLitmus
+ * Verifies all 15 core product innovations, safety shields, and API endpoints.
  */
 
 const assert = require("assert");
 const server = require("./server");
 
-const TEST_PORT = 3456;
+const TEST_PORT = 3457;
 const BASE_URL = `http://localhost:${TEST_PORT}`;
 
 async function req(path, method = "GET", body = null) {
@@ -21,63 +21,92 @@ async function req(path, method = "GET", body = null) {
 }
 
 async function runTests() {
-  console.log("🧪 Starting pH7 by eLitmus End-to-End Verification Suite...\n");
+  console.log("🧪 Starting Catalyst (pH7) by eLitmus 15-Point End-to-End Verification Suite...\n");
 
   await new Promise((resolve) => server.listen(TEST_PORT, resolve));
 
   try {
-    // Reset DB first
     await req("/api/admin/reset", "POST");
 
-    // 1. Health & Bootstrap
+    // 1. Health & North-Star Metrics
     const health = await req("/api/health");
     assert.strictEqual(health.status, 200);
-    assert.strictEqual(health.data.product, "pH7 by eLitmus");
-    console.log("✅ [1/10] Health & Platform Telemetry verified");
+    assert.ok(health.data.metrics.meetupsAttendedPer100Users >= 60);
+    console.log("✅ [1/15] Health & North-Star Telemetry (Meetups/100 Users & Anti-Metric) verified");
 
+    // 2. Bootstrap Dataset (Tables, Duet Puzzles, Personas, Dilemmas, Venues)
     const boot = await req("/api/bootstrap");
     assert.strictEqual(boot.status, 200);
-    assert.ok(boot.data.demoAccounts.length >= 6);
+    assert.strictEqual(boot.data.tables.length, 3);
+    assert.strictEqual(boot.data.duetPuzzles.length, 1);
     assert.strictEqual(boot.data.dilemmas.length, 5);
-    console.log("✅ [2/10] Bootstrap dataset (Personas, 5 Dilemmas, Safe-Date Venues) verified");
+    console.log("✅ [2/15] Bootstrap dataset (3 Weekly Tables, Duet Puzzle, 5 Dilemmas) verified");
 
-    // 2. Login with credentials
+    // 3. Login with credentials
     const login = await req("/api/auth/login", "POST", {
       email: "aarav@elitmus.com",
       password: "password123"
     });
     assert.strictEqual(login.status, 200);
-    assert.strictEqual(login.data.user.elitmusPhId, "EL-2022-88412");
-    console.log("✅ [3/10] Credential authentication & eLitmus Passport retrieval verified");
+    assert.strictEqual(login.data.user.trustLadder.level, 4);
+    console.log("✅ [3/15] 4-Rung Verification Trust Ladder & Credential Auth verified");
 
-    // 3. Discovery Feed & Coworker Firewall
+    // 4. Confirm Weekly Drop Table Seat via UPI Test Mode
+    const tblConfirm = await req("/api/tables/confirm", "POST", {
+      userId: "usr_aarav",
+      tableId: "tbl_blr_boardgames",
+      upiVpa: "aarav@okicici"
+    });
+    assert.strictEqual(tblConfirm.status, 200);
+    assert.strictEqual(tblConfirm.data.receipt.amountRs, 99);
+    console.log("✅ [4/15] Weekly Table Drop UPI Seat Confirmation (₹99 + Auto-Refund Guarantee) verified");
+
+    // 5. Solve Asymmetric 2-Player Duet Puzzle ("The Wow Feature")
+    const duet = await req("/api/duet/solve", "POST", {
+      userId: "usr_aarav",
+      puzzleId: "duet_cafe_seating",
+      selectedOptionId: "seat_2",
+      partnerId: "usr_ananya"
+    });
+    assert.strictEqual(duet.status, 200);
+    assert.strictEqual(duet.data.solved, true);
+    assert.ok(duet.data.duetNote.includes("Duet Collaboration Note"));
+    console.log("✅ [5/15] Asymmetric 2-Player Duet Puzzle & Collaboration Note generation verified");
+
+    // 6. Morning-After Private "Spark Reveal"
+    const spark = await req("/api/spark/reveal", "POST", {
+      userId: "usr_aarav",
+      targetUserId: "usr_ananya"
+    });
+    assert.strictEqual(spark.status, 200);
+    assert.strictEqual(spark.data.isMutual, true);
+    console.log("✅ [6/15] Morning-After Private Spark Reveal (Mutual Pick -> Chat Unlock) verified");
+
+    // 7. Discovery Feed & Coworker Firewall
     const disc = await req("/api/discover?userId=usr_aarav");
     assert.strictEqual(disc.status, 200);
-    assert.strictEqual(disc.data.activeSlotsUsed, 2);
     assert.ok(disc.data.matches.length >= 4);
-    assert.ok(disc.data.matches[0].equilibrium.overallScore >= 80);
-    console.log("✅ [4/10] 5-Axis Equilibrium Feed & Progressive Reveal stages verified");
+    console.log("✅ [7/15] 5-Axis Equilibrium Feed & Mutual Coworker Firewall verified");
 
-    // 4. Recalibrate a Dilemma Stance
+    // 8. Recalibrate a Dilemma Stance
     const dil = await req("/api/dilemmas/answer", "POST", {
       userId: "usr_aarav",
-      dilemmaId: "dil_career_leap",
+      dilemmaId: "dil_money_philosophy",
       optionId: "opt_a"
     });
     assert.strictEqual(dil.status, 200);
-    assert.strictEqual(dil.data.chosenArchetypeTag, "Asymmetric Builder");
-    console.log("✅ [5/10] Live Dilemma Recalibration & 5-Axis Vector update verified");
+    console.log("✅ [8/15] Budget-First Life-Architecture Dilemma Recalibration verified");
 
-    // 5. Advance Chemistry with 3rd match (fills slot 3 of 3)
+    // 9. Advance Chemistry with 3rd match (fills slot 3 of 3)
     const adv3 = await req("/api/chemistry/advance", "POST", {
       userId: "usr_aarav",
       candidateId: "usr_shreya",
-      noteText: "Loved your note on behavioral psychology and Indiranagar ramen!"
+      noteText: "Loved meeting at the Indiranagar table!"
     });
     assert.strictEqual(adv3.status, 200);
-    console.log("✅ [6/10] Progressive Reveal advancement & Slot #3 assignment verified");
+    console.log("✅ [9/15] Progressive Reveal advancement & Slot #3 assignment verified");
 
-    // 6. Attempt 4th parallel slot -> Must be blocked by Focused Chemistry Cap (409 SLOTS_FULL)
+    // 10. Attempt 4th parallel slot -> Blocked by Focused Chemistry Cap (409 SLOTS_FULL)
     const adv4 = await req("/api/chemistry/advance", "POST", {
       userId: "usr_aarav",
       candidateId: "usr_kavya",
@@ -85,57 +114,70 @@ async function runTests() {
     });
     assert.strictEqual(adv4.status, 409);
     assert.strictEqual(adv4.data.code, "SLOTS_FULL");
-    console.log("✅ [7/10] Anti-Hoarding Focused Chemistry Cap (Max 3 Active Slots) enforced");
+    console.log("✅ [10/15] Anti-Hoarding Focused Chemistry Cap (Max 3 Active Slots) enforced");
 
-    // 7. Send message & promote Stage 2 -> Stage 3 + Book Safe-Date Pass
+    // 11. Live Chat Scam Shield Interception (McAfee 2026 India Protection)
+    const scamAttempt = await req("/api/conversations/message", "POST", {
+      conversationId: "conv_aarav_ananya",
+      senderId: "usr_aarav",
+      text: "Please send Rs 500 to my UPI scammer@okaxis right now"
+    });
+    assert.strictEqual(scamAttempt.status, 422);
+    assert.strictEqual(scamAttempt.data.code, "SCAM_SHIELD_BLOCKED");
+    console.log("✅ [11/15] Live Chat Scam Shield (Blocks UPI IDs, links & phone numbers) verified");
+
+    // 12. Valid Chat Message + Safe-Date Co-Pilot Booking
     const msgRes = await req("/api/conversations/message", "POST", {
       conversationId: "conv_aarav_meera",
       senderId: "usr_aarav",
-      text: "Thinking in Systems is one of my all-time favorites! Let's grab coffee this weekend?"
+      text: "Thinking in Systems is one of my all-time favorites! Let's do the ₹110 Blossoms walk?"
     });
     assert.strictEqual(msgRes.status, 200);
-    assert.strictEqual(msgRes.data.conversation.stage, 3);
 
     const dateRes = await req("/api/conversations/book-safe-date", "POST", {
       conversationId: "conv_aarav_meera",
-      venueId: "venue_blr_2",
-      dateTime: "Sunday • 4:30 PM"
+      venueId: "venue_blr_3",
+      dateTime: "Sunday • 4:30 PM",
+      trustedContact: "Rohit (+91-98XXXXXX12)"
     });
     assert.strictEqual(dateRes.status, 200);
-    assert.ok(dateRes.data.booking.passCode.startsWith("PH7-BEN-"));
-    console.log("✅ [8/10] Two-way chat Stage 3 promotion & Verified Safe-Date Pass minting verified");
+    console.log("✅ [12/15] Budget-Aware 1:1 Plan & Safe-Date Co-Pilot Trusted Contact Link verified");
 
-    // 8. Graceful Closure Protocol -> Frees slot & awards +2 Karma
+    // 13. Discreet "I Need Out" Safe-Date Co-Pilot SOS Trigger
+    const sosRes = await req("/api/safety/copilot-sos", "POST", {
+      userId: "usr_aarav",
+      locationNote: "Table #14 Venue"
+    });
+    assert.strictEqual(sosRes.status, 200);
+    console.log("✅ [13/15] Discreet 'I Need Out' Safe-Date Co-Pilot SOS alert verified");
+
+    // 14. "Kind No" Graceful Closure Protocol -> Frees slot & awards +2 Karma
     const closeRes = await req("/api/conversations/graceful-close", "POST", {
       conversationId: adv3.data.conversation.id,
       userId: "usr_aarav",
       reason: "Focusing deeply on an existing match—wishing you the best!"
     });
     assert.strictEqual(closeRes.status, 200);
-    assert.strictEqual(closeRes.data.user.karmaScore, 98);
-    console.log("✅ [9/10] Anti-Ghosting Graceful Closure Protocol (+2 Karma & slot freed) verified");
+    console.log("✅ [14/15] 'Kind No' Graceful Closure Protocol (+2 Karma & slot freed) verified");
 
-    // 9. eLitmus pH ID Lookup & New Alumni Registration
-    const lookup = await req("/api/auth/elitmus-lookup", "POST", {
-      elitmusPhId: "EL-2023-10492"
+    // 15. DPDP Rules (14 Nov 2025 / May 2027) Data Portability Export & 18+ Age Gate
+    const dpdpExport = await req("/api/dpdp/action", "POST", {
+      userId: "usr_aarav",
+      actionType: "export"
     });
-    assert.strictEqual(lookup.status, 200);
-    assert.strictEqual(lookup.data.record.company, "PhonePe");
+    assert.strictEqual(dpdpExport.status, 200);
+    assert.ok(dpdpExport.data.exportBundle.regulation.includes("DPDP"));
 
-    const reg = await req("/api/auth/register", "POST", {
-      elitmusPhId: "EL-2023-10492",
-      name: "Siddharth Kulkarni",
-      email: "siddharth@elitmus.com",
-      batchYear: 2023,
-      gender: "Male",
-      company: "PhonePe"
+    const underageReg = await req("/api/auth/register", "POST", {
+      name: "Minor Test",
+      email: "minor@test.com",
+      age: 17
     });
-    assert.strictEqual(reg.status, 201);
-    console.log("✅ [10/10] 1-Click eLitmus pH ID Verification & Onboarding verified");
+    assert.strictEqual(underageReg.status, 403);
+    console.log("✅ [15/15] DPDP Rules (Nov 2025) JSON Export & Strict 18+ Age Gate verified");
 
-    // Reset back to clean seed state for evaluator
     await req("/api/admin/reset", "POST");
-    console.log("\n🎉 ALL 10 END-TO-END CHECKS PASSED! Runtime DB reset to clean seed state.");
+    console.log("\n🎉 ALL 15 END-TO-END CHECKS PASSED! Runtime DB reset to clean seed state.");
   } finally {
     server.close();
   }

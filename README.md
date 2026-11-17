@@ -1,104 +1,82 @@
-# ⚡ pH7 by eLitmus — *"Where Minds Click Before Faces Do"*
-### The Cognitive, Values & Life-Architecture Dating Protocol for Verified Young Professionals (2020–2023 Cohort)
+# ⚡ Catalyst (pH7) by eLitmus — *"The App That Wants You To Leave"*
+### Verified Small-Group Tables, Asymmetric Duet Puzzles, Mutual Spark Reveal & 5-Axis Equilibrium for Relocated Alumni (2020–2023 Cohort)
 
-> **Product Builder & Startup Founder Submission — eLitmus Challenge**  
-> Built from first principles to monetize eLitmus's **1,000,000+ verified alumni database (2020–2023 graduating batches)** while staying true to eLitmus's core ethos: **high-signal evaluation, meritocratic access, fair pricing, and deep institutional trust.**
+> **Pitch:** *Dating apps profit from keeping you swiping. **Catalyst (pH7)** earns only when verified graduates actually meet, in a small group, in public, within a week. Chat opens only after you've met.*  
+> **North-Star Metric:** **Meetups attended per 100 verified users (`64.8`)** • **Anti-Metric:** **Time-in-app (`14.2 mins/week` — lower is better!)**
 
 ---
 
-## 🔑 Quick Evaluation Credentials (For Live Demo & Submission Form)
+## 🔑 Judge Mode & Quick Evaluation Credentials
 
-You can switch between any of these personas with **1 click** using the **Top Evaluator Switcher Bar** in the app, OR log in manually via the `🔑 Login / Credentials` modal:
+We designed **Catalyst (pH7)** so judges never log into an empty app:
+1. **1-Click Persona Switcher Bar (Top of Screen):** Switch between 4 seeded alumni personas in different states without typing credentials.
+2. **⏱️ Judge Mode "Time Machine" Bar:** Fast-forward through the entire weekly lifecycle in 60 seconds:
+   - **Stage 1:** Sunday Weekly Drop (3 Curated Tables of 4–6 Relocated Grads, ₹0–₹300 Budget Caps, Razorpay/UPI ₹99 Seat Fee with Auto-Refund Guarantee)
+   - **Stage 2:** 3-Minute Asymmetric 2-Player **"Duet Puzzle"** Warm-Up (*The Wow Feature*)
+   - **Stage 3:** Venue Code Check-In (`CAT-BLR-408`) & **Safe-Date Co-Pilot** (Live Trusted Contact Share Link + Discreet *"I Need Out"* SOS)
+   - **Stage 4:** Morning-After Private **"Spark Reveal"** + **Explainable 5-Axis pH Equilibrium Radar**
+   - **Stage 5:** Unlocked 1:1 Chat with **Live McAfee 2026 Scam Shield** + **Focused 3-Slot Cap** + **"Kind No" Closure Templates**
 
-| Persona | Email / User ID | Password | eLitmus pH ID | Cohort & Role | Key Demo Highlight |
+| Persona | Email / User ID | Password | eLitmus pH ID | Relocated Migrant Context | Key Demo Highlight |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Aarav Mehta** *(Default)* | `aarav@elitmus.com` | `password123` | `EL-2022-88412` | 2022 Batch • SDE-2 @ Razorpay (BLR) | Has 2/3 Active Chemistry Slots (`Ananya` at Stage 3, `Meera` at Stage 2) + Coworker Firewall cloaking `Vikramaditya @ Razorpay` |
-| **Ananya Iyer** | `ananya@elitmus.com` | `password123` | `EL-2021-41908` | 2021 Batch • PM @ Swiggy (BLR) | `Empathetic Strategist` Archetype • 98 Karma Score • Active Safe-Date Pass at Araku Coffee |
-| **Meera Krishnan** | `meera@elitmus.com` | `password123` | `EL-2020-19204` | 2020 Batch • Lead Designer @ Atlassian (BLR) | `Creative Catalyst` Archetype • Stage 2 Half-Reveal ready to promote to Stage 3 |
-| **Rohan Verma** | `rohan@elitmus.com` | `password123` | `EL-2021-30944` | 2021 Batch • Applied AI @ Microsoft (HYD) | Cross-metro Hyderabad/Bengaluru alumni profile |
-| **Kavya Deshmukh** | `kavya@elitmus.com` | `password123` | `EL-2023-77319` | 2023 Batch • Backend Eng @ Zerodha (BLR) | `Pragmatic Builder` • FIRE Financial Thermostat |
-| **New User Onboarding** | *Click `+ Import eLitmus pH ID`* | `password123` | `EL-2023-10492` *(or `EL-2022-66201`)* | 1-Click Verified Import | Demonstrates zero-friction onboarding from the eLitmus 2020–2023 Alumni Ledger |
+| **Aarav Mehta** *(Default)* | `aarav@elitmus.com` | `password123` | `EL-2022-88412` | Jaipur → Bengaluru ('22 Batch • SDE-2 @ Razorpay) | Confirmed at Sunday Table #14; playable Duet Puzzle with Ananya; Coworker Firewall cloaking Razorpay colleague `Vikramaditya` |
+| **Ananya Iyer** | `ananya@elitmus.com` | `password123` | `EL-2021-41908` | Mumbai → Bengaluru ('21 Batch • PM @ Swiggy) | Rung 4/4 Vouched • 100% Show-Up Rate • Active Safe-Date Co-Pilot at Araku Coffee |
+| **Meera Krishnan** | `meera@elitmus.com` | `password123` | `EL-2020-19204` | Coimbatore → Bengaluru ('20 Batch • Designer @ Atlassian) | Stage 2 Table Spark ready to promote to Stage 3; ₹80–₹150 Bookstore Walk fan |
+| **Rohan Verma** | `rohan@elitmus.com` | `password123` | `EL-2021-30944` | Chandigarh → Hyderabad ('21 Batch • Applied AI @ Microsoft) | Cross-metro Hyderabad/Bengaluru alumni profile |
 
 ---
 
-## 🧠 1. First-Principles Product Thesis: Why Conventional Dating Apps Fail & Why `pH7` Wins
+## 📊 1. Market Research Foundation (Why We Built Catalyst pH7)
 
-Most dating apps in India fall into two broken extremes:
-1. **Hyper-Superficial Swipe Apps (Tinder / Bumble / Hinge):**
-   - Rely on a **0.8-second split-second photo swipe**.
-   - Result: Top 10% photogenic profiles hoard 80% of attention; women face 500+ low-effort *"Hey wsp"* messages and rampant career/identity catfishing; men face <2% match rates and predatory ₹2,500/month boosts.
-   - **Workplace Anxiety:** Young Indian professionals (ages 23–28, our 2020–2023 batch cohort) dread their manager, HR, or team stumbling across their dating profile.
-2. **Rigid Matrimony Portals:**
-   - Parent-driven, biodata/caste/salary-slip obsessed, zero psychological or conversational chemistry.
-
-### Enter `pH7` (Named after the iconic **eLitmus pH Test** + **pH 7 Chemical Equilibrium**):
-We turn eLitmus's unfair advantages (**verified college/batch credentials, cognitive/analytical evaluation DNA, and corporate domain graph**) into **6 category-defining product innovations**:
-
-1. **⚡ Progressive Wavelength-First Reveal (The Anti-Swipe):**
-   - No left/right photo swiping. Candidate portraits start at **Stage 1 (65% Frosted Blur)**.
-   - Users first evaluate **Voice/Mind Prompts**, **5-Axis Cognitive & Life-Architecture Equilibrium**, and **Side-by-Side Micro-Case Dilemma Stances**.
-   - Photos unblur progressively: **Stage 2 (Half-Reveal)** on syncing a dilemma/mind-note, and **Stage 3 (100% Crystal Reveal)** upon two-way conversation.
-2. **📊 Explainable 5-Axis pH Equilibrium Engine:**
-   - Computes transparent compatibility across:
-     1. *Intellectual Wavelength* (Similarity-weighted)
-     2. *Financial Thermostat* (Similarity-weighted: FIRE index compounder vs. experiential spender)
-     3. *Ambition & Career Tempo* (Similarity-weighted: startup ESOP swing vs. steady equilibrium)
-     4. *Conflict & Communication Protocol* (Calibrated balance: 11 PM live debugger vs. morning chai diplomat)
-     5. *Social Battery & Weekend Rhythm* (Complementarity-friendly)
-   - Includes a live **SVG 5-Axis Polygon Radar** and a **What-If Compatibility Simulator**.
-3. **🛡️ Cryptographic eLitmus Trust Passport + Automatic Coworker Firewall:**
-   - **Zero Catfishing:** Every profile carries a verified eLitmus Batch (`'20`–`'23`), Alma Mater, and Work Domain badge.
-   - **Zero Raw Score Leakage:** Raw eLitmus pH hiring scores are *never* exposed; they are one-way translated into positive **Cognitive Archetypes** (*Systems Architect*, *Empathetic Strategist*, *Creative Catalyst*, *Pragmatic Builder*).
-   - **Automatic Coworker & Batchmate Cloak:** Mutual firewall automatically hides your profile from coworkers at your current company domain (e.g., `@razorpay.com`, `@swiggy.in`) and recruiters—solving workplace awkwardness for free.
-4. **🧪 Focused Chemistry Cap (Max 3 Active Slots) + Anti-Ghosting Karma Protocol:**
-   - Users can hold at most **3 Active Chemistry Conversations** simultaneously.
-   - To open a 4th conversation, a user must execute a **1-Click Graceful Closure** on an existing slot—sending a kind, honest closure note that awards **+2 Accountability Karma & +10 Credits** instead of ghosting.
-5. **🎲 Co-Op Icebreaker Studio & 🥂 Verified Safe-Date Concierge (B2B2C):**
-   - Built-in interactive icebreakers (*2 Truths & 1 Career Plot-Twist*, *₹25k Weekend Hackathon*) eliminate awkward small talk.
-   - **Verified Safe-Date Pass:** One-click booking at curated partner venues in Bengaluru, Hyderabad, Pune, and Gurugram (e.g., *Araku Coffee Indiranagar*, *The Boardroom Koramangala*, *Roastery Hyderabad*) with **20% eLitmus Alumni Perks** and **Ask-for-Angela Venue Safety Verification**.
-6. **🚀 Interactive Founder's Playbook (Built into Tab 5 of the App):**
-   - Includes a live **Unit Economics & ARR Simulator**, **1M Alumni Zero-CAC Acquisition Funnel**, and **DPDP Act 2023 / POSH Legal Architecture**.
+- **Burnout is the Market:** **78% of dating-app users report fatigue**, and Gen Z spends **~156 hours/year** on apps for roughly **6 meaningful connections** (*Desiblitz*). Tinder's paying users fell **8%** and Bumble's fell **16%**, while outcome-oriented apps grew **17%** (*Implicator.ai*).
+- **Why We Don't Lead with an AI Matchmaker:** Incumbents are pushing AI "Chemistry" and AI chat assistants, yet Gen Z is the group *least* impressed by AI matchmaking (*Implicator.ai*). Instead, we built the human-reasoning **2-Player Duet Puzzle**.
+- **India's 3 Structural Bottlenecks — Trust, Gender Ratio & Payments:**
+  1. **78% of Indian women** on dating/matrimonial apps report meeting fake profiles (*Feminism in India, Dec 2025*).
+  2. **70–80% of users on standard Indian apps are men**, and men right-swipe ~77% of profiles vs. ~7% for women (*Outlook Business*).
+  3. **Low credit-card penetration & subscription fatigue** point to **UPI micro-payments (₹49–₹149)** and **B2B venue/corporate revenue** (*Loestro*).
+- **The Target User — Lonely Relocated Migrants (Ages 23–30):** The 2020–2023 batches relocated to Bengaluru, Hyderabad, Pune, and Gurugram for tech jobs (*Deccan Herald: "Why does Bengaluru feel lonely?"*). Curated stranger tables (*Timeleft, StepOut*) lack verified graduate identity.
+- **eLitmus's Unfair Advantage:** Candidates submit Class 10/12 and graduation documents for pH test verification, and **650+ corporate clients** trust eLitmus (*AdmitKard / eLitmus*). *"Every member is a verified real graduate"* is a day-one claim no competitor can match.
 
 ---
 
-## 📈 2. Owning User Acquisition, Revenue & Legal Implications
+## 🧪 2. The Core Loop & Signature Features
 
-### A. User Acquisition Strategy (Converting 1M+ 2020–2023 Batch Alumni at ~₹18 CAC)
-- **Phase 1 — "Your eLitmus pH Cognitive Archetype Wrapped" Viral Hook:** Emailing 1M alumni a personalized *"2020–2023 Career & Mindset Archetype Report"* derived from their historical pH trajectory. At the bottom: *"Unlock pH7 to meet verified alumni in your city who share 92%+ Equilibrium with your archetype."*
-- **Phase 2 — Gender-Balanced City Cohort Unlocks:** Admitting users in 50:50 gender-balanced waves across Bengaluru, Hyderabad, Pune, and NCR so the gender ratio never skews like Tinder (80:20). Women get default **Karma-Gated Inboxes** (only men with ≥90 Accountability Karma can initiate).
-- **Phase 3 — Offline Tech-Hub Board-Game & Pour-Over Mixers:** Curated 24-person alumni mixers in Indiranagar, HSR, Banjara Hills, and CyberHub.
-
-### B. Ethical, Multi-Stream Monetization (~₹6.5 Cr – ₹18+ Cr ARR Potential)
-Honoring eLitmus's philosophy of affordable meritocracy:
-1. **pH7 Equilibrium+ Fair-Price Subscription (₹349/mo — 75% cheaper than Tinder/Bumble):** Unlocks Cross-Metro Relocation Mode, Unlimited Deep 5-Axis Reports, and Priority Cohort Drops. *(Also unlockable for ₹0 via maintaining a 95+ Anti-Ghosting Karma Score!)*
-2. **B2B2C Safe-Date Partner Venue Network (₹180 avg commission / booking):** Specialty cafes, board-game lounges, and pottery studios pay pH7 an 18% referral take-rate for driving high-spending verified young professional couples on weekends.
-3. **Ticketed Offline Cognitive Mixers (₹799/ticket):** High-trust offline community events with 40%+ net margin.
-
-### C. Legal, Regulatory & Safety Architecture (India 2026)
-- **DPDP Act 2023 (Digital Personal Data Protection Act) Purpose Limitation:** Job assessment data cannot be automatically repurposed for dating without explicit consent. `pH7` uses an explicit **Opt-In Consent Ledger** during `Import eLitmus pH ID` and stores only a non-reversible Cognitive Archetype tag—keeping eLitmus's corporate hiring database strictly firewalled.
-- **POSH & Corporate Client Protection:** Default-ON **Coworker Domain Cloaking** ensures `pH7` never becomes a vector for intra-office harassment, protecting eLitmus's enterprise reputation.
-- **IT Rules 2021 & Offline Date Safety:** 24-hour Grievance Officer SLA + **Ask-for-Angela Safe-Zone Venue Protocol**.
+1. **Metered Waitlist & 4-Rung Verification Trust Ladder:**
+   - **Rung 1:** Phone OTP → **Rung 2:** Strict 18+ DOB Gate & Selfie Liveness → **Rung 3:** eLitmus Class 10/12 & Degree Credential Link → **Rung 4:** Two In-Person Table Peer Vouches.
+2. **Sunday Weekly Drop (3 Curated Tables • ₹0–₹300 Budget Caps • No Browsing):**
+   - Pick 1 of 3 small-group tables (4–6 verified grads, 50:50 gender balanced) within 24 hours.
+   - Budget-aware plans (`₹0–₹300`, e.g., Cubbon Park Filter Coffee Walk or Blossoms Bookstore Browse) remove financial pressure (*Fortune 2026*).
+3. **Asymmetric 2-Player "Duet Puzzle" (The Wow Feature):**
+   - Before the table, two participants play a 3-minute co-op logic puzzle where Player A sees Clue Half A and Player B sees Clue Half B.
+   - Generates a **"Duet Collaboration Note"** revealing how they communicate, take turns, and reason together.
+4. **Shared-Memory pH Icebreakers (Zero Score Ranking):**
+   - With explicit consent, shows *"You both wrote the eLitmus pH test in Aug 2022 and relocated to Bengaluru"*. Never shows raw scores or ranks people by them.
+5. **Morning-After Private "Spark Reveal" + Explainable 5-Axis Radar:**
+   - Privately select up to 2 tablemates you'd see again. Mutual picks unlock 1:1 Chat + a budget-capped 1:1 plan. Non-mutual picks reveal nothing (zero rejection notice).
+6. **Live Chat Scam Shield & Safe-Date Co-Pilot:**
+   - **Scam Shield (*McAfee 2026 India Research*):** Automatically blocks UPI IDs (`@okaxis`, `@ybl`), QR requests, phone numbers, and external links in early chat.
+   - **Safe-Date Co-Pilot:** Shares a live plan link with a trusted contact, runs a 45-minute check-in timer, and includes a discreet **"I Need Out" SOS button**.
 
 ---
 
-## 🛠️ 3. Technology Stack & How to Run Locally
+## 🚫 3. What We Explicitly Refused to Build (And Why)
 
-- **Architecture:** Zero-external-dependency Full-Stack Node.js HTTP/REST Server (`server.js`) + Persistent JSON/In-Memory State Store (`services/dbStore.js`) + Explainable 5-Axis Compatibility Engine (`services/equilibriumEngine.js`) + Reactive Vanilla ES6 SPA Frontend (`public/`).
-- **Why this stack?** Starts in `<100ms` on any machine with Node.js `>=18`, requires zero fragile native binary compilations, persists all state across refreshes, and resets cleanly with 1 click for evaluators.
+1. **No Swiping & No Infinite Feed:** Prevents the 156-hour/year scroll addiction and 77% vs. 7% gender swipe asymmetry.
+2. **No Paid "Boosts":** Predatory monetization that profits from keeping men unmatched.
+3. **No Caste Filter:** Discriminatory and risks app-store removal; we match on intent, language, city, diet, and values.
+4. **No AI-Written Messages:** Erodes trust and fuels romance scams.
+5. **No pH-Score Leaderboard:** Elitist and a privacy hazard.
 
-### Run Locally in 2 Commands:
+---
+
+## 🛠️ 4. How to Run Locally
+
 ```bash
-# 1. Start the full-stack server (defaults to http://localhost:3000)
+# 1. Start the full-stack server (http://localhost:3000)
 npm start
 
-# 2. (Optional) Run the 10-point End-to-End Automated Test Suite
+# 2. Run the 15-point automated integration test suite
 npm test
 ```
-Then open **`http://localhost:3000`** in your browser!
 
----
-
-## 📜 Disclosure of Third-Party Resources
-- **Fonts:** Google Fonts (`Inter`).
-- **Icons & Illustrations:** Custom-crafted inline SVG portraits and 5-Axis Polygon Radar charts built specifically for `pH7`.
-- **Runtime:** Pure Node.js standard library (`http`, `fs`, `path`, `url`) + standard Web APIs (`fetch`, `speechSynthesis`). All product logic, algorithms, and UI components are original work created for this assignment.
+See [CREDITS.md](file:///c:/Users/Chirayu%20%20M/Downloads/elitmus/CREDITS.md) for full Rule 5.1 disclosure and [FOUNDER_SUBMISSION_ANSWERS.md](file:///c:/Users/Chirayu%20%20M/Downloads/elitmus/FOUNDER_SUBMISSION_ANSWERS.md) for complete Google Form answers.
