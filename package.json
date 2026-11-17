@@ -1,0 +1,24 @@
+{
+  "name": "ph7-elitmus-dating",
+  "version": "1.0.0",
+  "description": "pH7 by eLitmus — The Cognitive & Values-First Dating Protocol for Verified Young Professionals (2020-2023 Cohort)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test-suite.js"
+  },
+  "keywords": [
+    "elitmus",
+    "dating-app",
+    "ph7",
+    "cognitive-compatibility",
+    "verified-dating",
+    "product-builder"
+  ],
+  "author": "Startup Founder Candidate — eLitmus Assignment",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
